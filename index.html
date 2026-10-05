@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faqat Muslima uchun ❤️️</title>
+    <!-- Tailwind CSS yuklash -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Great Vibes va Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%}
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,0,128,.20),transparent 28%),
+    radial-gradient(circle at 80% 80%,rgba(132,0,255,.18),transparent 30%),
+    radial-gradient(circle at center,#2d0b1a 0%,#120309 58%,#050107 100%);
+  overflow:hidden;touch-action:manipulation;
+}
+.romantic-font{font-family:'Great Vibes',cursive}
+.glass-card{
+  background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(255,130,200,.25);
+  box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 45px rgba(255,20,147,.18) inset;
+  transform-style:preserve-3d;
+  animation:cardFloat 5s ease-in-out infinite;
+}
+@keyframes cardFloat{0%,100%{transform:translateY(0) rotateX(0deg)}50%{transform:translateY(-7px) rotateX(.8deg)}}
+.neon-glow{text-shadow:0 0 8px #ff69b4,0 0 18px #ff1493,0 0 38px rgba(255,0,127,.7)}
+#particleCanvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+#magicLayer{position:fixed;inset:0;pointer-events:none;z-index:30;overflow:hidden}
+.pulse-btn{
+  background:linear-gradient(135deg,#ff3366,#ff0055);
+  box-shadow:0 0 25px rgba(255,51,102,.6),0 8px 25px rgba(0,0,0,.25);
+  transition:.35s cubic-bezier(.175,.885,.32,1.275);
+}
+.pulse-btn:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 0 45px rgba(255,51,102,.95)}
+.choice-wrap{position:relative;height:78px;width:100%;display:flex;justify-content:center;align-items:center;gap:14px}
+.choice-btn{
+  position:relative;min-width:125px;height:52px;border:0;color:white;font-weight:800;
+  border-radius:999px;cursor:pointer;z-index:20;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.yes-btn{background:linear-gradient(135deg,#10b981,#059669);box-shadow:0 0 25px rgba(16,185,129,.28)}
+.no-btn{background:linear-gradient(135deg,#f43f5e,#be123c);position:absolute;left:calc(50% + 8px);top:13px;z-index:25}
+.choice-btn:hover{transform:translateY(-3px) scale(1.04)}
+.floating-heart{
+  position:absolute;bottom:-50px;font-size:20px;animation:heartRise linear forwards;
+  filter:drop-shadow(0 0 8px currentColor);opacity:.85;
+}
+@keyframes heartRise{0%{transform:translate3d(0,0,0) scale(.6) rotate(0);opacity:0}12%{opacity:1}100%{transform:translate3d(var(--drift),-115vh,0) scale(1.35) rotate(360deg);opacity:0}}
+.confetti{position:fixed;width:9px;height:14px;z-index:50;animation:fall linear forwards;border-radius:2px}
+@keyframes fall{0%{transform:translateY(-12vh) rotate(0) rotateX(0);opacity:1}100%{transform:translateY(110vh) rotate(900deg) rotateX(360deg);opacity:0}}
+#step3{perspective:1000px}
+.final-title{
+  transform-style:preserve-3d;
+  animation:title3d 2.8s ease-in-out infinite;
+}
+@keyframes title3d{
+  0%,100%{transform:rotateX(0) rotateY(-3deg) translateZ(0) scale(1)}
+  50%{transform:rotateX(8deg) rotateY(5deg) translateZ(25px) scale(1.04)}
+}
+.final-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,0,120,.06));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 20px 70px rgba(255,0,100,.15),inset 0 0 40px rgba(255,255,255,.04);
+  transform-style:preserve-3d;
+  animation:card3d 4s ease-in-out infinite;
+}
+@keyframes card3d{0%,100%{transform:rotateY(-1deg) translateZ(0)}50%{transform:rotateY(2deg) translateZ(12px)}}
+.magic-word{
+  display:inline-block;margin:6px 4px;
+  font-weight:800;
+  transform-style:preserve-3d;
+  animation:wordPop .9s cubic-bezier(.2,1.4,.4,1) both;
+}
+@keyframes wordPop{
+  0%{opacity:0;transform:translateY(45px) rotateX(-90deg) scale(.3)}
+  70%{opacity:1;transform:translateY(-8px) rotateX(12deg) scale(1.12)}
+  100%{opacity:1;transform:translateY(0) rotateX(0) scale(1)}
+}
+.spark{position:absolute;width:4px;height:4px;border-radius:50%;background:white;box-shadow:0 0 12px #fff;animation:spark 1.6s ease-out forwards}
+@keyframes spark{0%{transform:scale(.2);opacity:0}20%{opacity:1}100%{transform:translate(var(--sx),var(--sy)) scale(0);opacity:0}}
+.ring3d{
+  width:92px;height:92px;border-radius:50%;margin:auto;
+  border:2px solid rgba(255,105,180,.55);
+  box-shadow:0 0 18px rgba(255,20,147,.5),inset 0 0 18px rgba(255,20,147,.2);
+  animation:ringSpin 4s linear infinite;
+  display:flex;align-items:center;justify-content:center;
+}
+@keyframes ringSpin{to{transform:rotateY(360deg) rotateZ(360deg)}}
+@media(max-width:500px){.choice-btn{min-width:112px}.choice-wrap{gap:8px}.no-btn{left:calc(50% + 4px)}}
+</style>
+
+</head>
+<body class="relative min-h-screen flex items-center justify-center p-4">
+
+    <canvas id="particleCanvas"></canvas>
+    <div id="magicLayer"></div>
+
+    <!-- Orqa fonda avtomatik ijro etiluvchi romantik musiqa (Audio Element) -->
+    <audio id="romanticAudio" loop>
+        <source src="YouCut_20261004_202527257_MP3.mp3" type="audio/ogg">
+    </audio>
+
+    <main class="relative z-10 glass-card rounded-3xl p-8 md:p-12 max-w-lg w-full text-center transition-all duration-700">
+        
+        <!-- QADAM 1: Hatni ochish tugmasi -->
+        <div id="step1" class="space-y-6">
+            <div class="inline-block p-4 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 animate-bounce mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white tracking-wide">Sizga maxsus maktub bor 💌</h2>
+            <p class="text-pink-200/70 text-sm md:text-base">Maktubni ochish uchun quyidagi tugmani bosing va sehrli olamga kiring...</p>
+            <button onclick="openLetter()" class="pulse-btn text-white font-semibold text-lg px-8 py-4 rounded-full w-full shadow-lg cursor-pointer">
+                Hatni ochish 🌹
+            </button>
+        </div>
+
+        <!-- QADAM 2: Muslima va kechirim so'rash qismi -->
+        <div id="step2" class="hidden space-y-6 opacity-0 transition-opacity duration-1000">
+            <div class="space-y-2">
+                <span class="text-pink-400 text-sm font-semibold tracking-widest uppercase">Maxsus ism</span>
+                <h1 class="romantic-font text-6xl md:text-7xl text-pink-300 neon-glow">Muslima</h1>
+            </div>
+
+            <div class="py-4">
+                <p class="text-2xl md:text-3xl font-semibold text-white tracking-wide mb-2">Meni kechirasizmi? 🥺</p>
+                <p class="text-pink-200/60 text-xs md:text-sm italic">"Xatolarim uchun chin dildan uzr so'rayman..."</p>
+            </div>
+
+            <!-- Interaktiv tugmalar -->
+            <div id="buttonContainer" class="choice-wrap pt-2">
+                <button onclick="sayYes()" class="choice-btn yes-btn">Ha ❤️</button>
+                <button id="btnNo" class="choice-btn no-btn">Yo'q ❌</button>
+            </div>
+        </div>
+
+        <!-- QADAM 3: Ha bosilgandagi tantanali natija -->
+        <div id="step3" class="hidden space-y-6 opacity-0 transition-all duration-1000">
+            <div class="ring3d"><div class="inline-block p-4 rounded-full bg-red-500/20 border border-red-500/40 text-red-400 animate-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div></div>
+            <div class="final-card rounded-3xl p-5">
+              <h2 id="finalTitle" class="final-title romantic-font text-5xl md:text-6xl text-pink-300 neon-glow leading-tight"></h2>
+              <div id="animatedWords" class="mt-4 text-pink-100 text-base md:text-lg min-h-[48px]"></div>
+            </div>
+            <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                <p id="loveTicker" class="text-pink-100 text-sm md:text-base font-medium italic">"Dunyoning eng go'zal va mehribon qiziga..."</p>
+            </div>
+        </div>
+    </main>
+
+    
+<script>
+const canvas=document.getElementById('particleCanvas'),ctx=canvas.getContext('2d');
+let width=canvas.width=innerWidth,height=canvas.height=innerHeight;
+addEventListener('resize',()=>{width=canvas.width=innerWidth;height=canvas.height=innerHeight});
+const particles=[];
+for(let i=0;i<95;i++)particles.push({
+ x:Math.random()*width,y:Math.random()*height,size:Math.random()*3+1,
+ sx:(Math.random()-.5)*.7,sy:-(Math.random()*.8+.15),a:Math.random()*.7+.2
+});
+function animateParticles(){
+ ctx.clearRect(0,0,width,height);
+ for(const p of particles){
+  p.x+=p.sx;p.y+=p.sy;
+  if(p.y<-10){p.y=height+10;p.x=Math.random()*width}
+  if(p.x<-10)p.x=width+10;if(p.x>width+10)p.x=-10;
+  ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+  ctx.fillStyle=Math.random()>.5?'#ff4f9a':'#ffd1e8';ctx.globalAlpha=p.a;
+  ctx.shadowBlur=14;ctx.shadowColor='#ff1493';ctx.fill();ctx.shadowBlur=0;
+ }
+ ctx.globalAlpha=1;requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+const magic=document.getElementById('magicLayer');
+function floatingHearts(n=22){
+ for(let i=0;i<n;i++){
+  const h=document.createElement('div');h.className='floating-heart';
+  h.textContent=['❤','💖','💗','✨','🌹'][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+'vw';h.style.color=['#ff4f9a','#ff9dcc','#fff','#ff1493'][Math.floor(Math.random()*4)];
+  h.style.fontSize=(14+Math.random()*25)+'px';
+  h.style.animationDuration=(4+Math.random()*5)+'s';
+  h.style.animationDelay=Math.random()*2+'s';
+  h.style.setProperty('--drift',((Math.random()-.5)*180)+'px');
+  magic.appendChild(h);setTimeout(()=>h.remove(),11000);
+ }
+}
+setInterval(()=>floatingHearts(3),900);floatingHearts(15);
+
+function openLetter(){
+ const audio=document.getElementById('romanticAudio');
+ audio.play().catch(()=>{});
+ const s1=document.getElementById('step1'),s2=document.getElementById('step2');
+ s1.style.transform='scale(.8) rotateX(20deg)';s1.style.opacity='0';
+ setTimeout(()=>{s1.classList.add('hidden');s2.classList.remove('hidden');
+  setTimeout(()=>{s2.style.opacity='1';s2.style.transform='translateY(0) scale(1)'},50)
+ },500);
+}
+
+const btnNo=document.getElementById('btnNo'),container=document.getElementById('buttonContainer');
+let dodgeCount=0;
+function dodgeButton(){
+ const r=container.getBoundingClientRect(),b=btnNo.getBoundingClientRect();
+ const pad=5;
+ const rangeX=Math.max(55,(r.width-b.width)/2-5);
+ const rangeY=20;
+ let x=(Math.random()*2-1)*rangeX,y=(Math.random()*2-1)*rangeY;
+ // Keep the button inside the visible container.
+ btnNo.style.transform=`translate(${x}px,${y}px) rotate(${(Math.random()*16-8)}deg) scale(.96)`;
+ dodgeCount++;
+ if(dodgeCount===3)btnNo.textContent='Yo‘q 😏';
+ if(dodgeCount===6)btnNo.textContent='Urinmang 😂';
+ if(dodgeCount>=9)btnNo.textContent='Baribir yo‘q 😜';
+}
+btnNo.addEventListener('mouseenter',dodgeButton);
+btnNo.addEventListener('touchstart',e=>{e.preventDefault();dodgeButton()},{passive:false});
+btnNo.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse')dodgeButton()});
+
+function sayYes(){
+ const s2=document.getElementById('step2'),s3=document.getElementById('step3');
+ s2.style.opacity='0';s2.style.transform='scale(.7) rotateY(25deg)';
+ setTimeout(()=>{
+  s2.classList.add('hidden');s3.classList.remove('hidden');
+  setTimeout(()=>{s3.style.opacity='1';startCelebration();animateFinalText()},60);
+ },550);
+}
+
+function startCelebration(){
+ const colors=['#ff3366','#ff75b3','#fff','#ff1493','#ffd700','#a78bfa'];
+ for(let i=0;i<150;i++){
+  const c=document.createElement('div');c.className='confetti';
+  c.style.left=Math.random()*100+'vw';c.style.top='-20px';
+  c.style.background=colors[Math.floor(Math.random()*colors.length)];
+  c.style.transform=`rotate(${Math.random()*360}deg)`;
+  c.style.animationDuration=(2.5+Math.random()*3.5)+'s';
+  c.style.animationDelay=Math.random()*1.5+'s';
+  document.body.appendChild(c);setTimeout(()=>c.remove(),7000);
+ }
+ for(let i=0;i<35;i++){
+  const s=document.createElement('span');s.className='spark';
+  s.style.left='50%';s.style.top='42%';
+  s.style.setProperty('--sx',((Math.random()-.5)*430)+'px');
+  s.style.setProperty('--sy',((Math.random()-.5)*300)+'px');
+  s.style.animationDelay=Math.random()*.7+'s';magic.appendChild(s);
+  setTimeout(()=>s.remove(),2400);
+ }
+ floatingHearts(30);
+}
+
+function animateFinalText(){
+ const title=document.getElementById('finalTitle');
+ const words=document.getElementById('animatedWords');
+ title.innerHTML='Rahmat! Seni sevaman! 💖🌹';
+ const lines=[
+  'Bugun qalbim yanada xotirjam bo‘ldi ✨',
+  'Tabassuming doimo yuzingda bo‘lsin 💕',
+  'Har bir kuning baxt va quvonchga to‘lsin 🌹',
+  'Sen uchun eng chiroyli tilaklarim bor 💫'
+ ];
+ let i=0;
+ function next(){
+  words.innerHTML='';
+  const parts=lines[i].split(' ');
+  parts.forEach((w,k)=>{
+   const span=document.createElement('span');span.className='magic-word';span.textContent=w;
+   span.style.animationDelay=(k*.07)+'s';words.appendChild(span);
+  });
+  i=(i+1)%lines.length;
+ }
+ next();setInterval(next,4200);
+}
+</script>
+
+</body>
+</html>
